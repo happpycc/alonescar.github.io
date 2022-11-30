@@ -20,25 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"alonescar.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Some note about programming">
-<meta property="og:type" content="website">
-<meta property="og:title" content="als-blog">
-<meta property="og:url" content="https://alonescar.github.io/index.html">
+    <meta name="description" content="For alonescar, the desktop system he choose is dwm.dwm is based on xorg and there are some based tools need to be downloaded, such as dmenu, slstatus, st and so on. Install xorg1sudo pacman -S xorg xo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Archlinux Desktop Install">
+<meta property="og:url" content="https://alonescar.github.io/2022/11/30/Archlinux-Desktop-Install/index.html">
 <meta property="og:site_name" content="als-blog">
-<meta property="og:description" content="Some note about programming">
+<meta property="og:description" content="For alonescar, the desktop system he choose is dwm.dwm is based on xorg and there are some based tools need to be downloaded, such as dmenu, slstatus, st and so on. Install xorg1sudo pacman -S xorg xo">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-30T13:57:01.000Z">
+<meta property="article:modified_time" content="2022-11-30T14:37:59.046Z">
 <meta property="article:author" content="AloneScar">
+<meta property="article:tag" content="Archlinux">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://alonescar.github.io/">
+<link rel="canonical" href="https://alonescar.github.io/2022/11/30/Archlinux-Desktop-Install/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alonescar.github.io/2022/11/30/Archlinux-Desktop-Install/","path":"2022/11/30/Archlinux-Desktop-Install/","title":"Archlinux Desktop Install"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>als-blog</title>
+<title>Archlinux Desktop Install | als-blog</title>
   
 
 
@@ -69,7 +72,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">als-blog</h1>
+      <p class="site-title">als-blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Alonescar Blog</p>
@@ -102,7 +105,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -115,6 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-xorg"><span class="nav-number">1.</span> <span class="nav-text">Install xorg</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-dwm-and-some-neccessary-tools"><span class="nav-number">2.</span> <span class="nav-text">Download dwm and some neccessary tools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">3.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configure"><span class="nav-number">4.</span> <span class="nav-text">Configure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Copy-xinitrc-to-home"><span class="nav-number">4.1.</span> <span class="nav-text">Copy .xinitrc to home</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-dwm-into-xinitrc"><span class="nav-number">4.2.</span> <span class="nav-text">Add dwm into .xinitrc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-startx"><span class="nav-number">5.</span> <span class="nav-text">Run startx</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,16 +179,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://alonescar.github.io/2022/11/30/Archlinux-Desktop-Install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -198,13 +203,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | als-blog">
+      <meta itemprop="name" content="Archlinux Desktop Install | als-blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/11/30/Archlinux-Desktop-Install/" class="post-title-link" itemprop="url">Archlinux Desktop Install</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Archlinux Desktop Install
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -237,7 +242,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>For alonescar, the desktop system he choose is <code>dwm</code>.<br><code>dwm</code> is based on <code>xorg</code> and there are some based tools need to be downloaded, such as <code>dmenu</code>, <code>slstatus</code>, <code>st</code> and so on.</p>
+        <p>For alonescar, the desktop system he choose is <code>dwm</code>.<br><code>dwm</code> is based on <code>xorg</code> and there are some based tools need to be downloaded, such as <code>dmenu</code>, <code>slstatus</code>, <code>st</code> and so on.</p>
 <h2 id="Install-xorg"><a href="#Install-xorg" class="headerlink" title="Install xorg"></a>Install <code>xorg</code></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S xorg xorg-xinit udisk2 udiskie</span><br></pre></td></tr></table></figure>
 
 <h2 id="Download-dwm-and-some-neccessary-tools"><a href="#Download-dwm-and-some-neccessary-tools" class="headerlink" title="Download dwm and some neccessary tools"></a>Download <code>dwm</code> and some neccessary tools</h2><ul>
@@ -245,201 +250,48 @@
 <li><a target="_blank" rel="noopener" href="https://tools.suckless.org/dmenu/">dmenu</a> A menu which is put the top of the window by default, you can search by it.</li>
 <li><a target="_blank" rel="noopener" href="https://tools.suckless.org/slstatus/">slstatus</a> A status bar</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/30/Archlinux-Desktop-Install/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+<span id="more"></span>
+
+<p>alonescar hope install in a folder like <code>Softwares</code>, it will be more easy to manage.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://git.suckless.org/dwm</span><br><span class="line">git clone https://git.suckless.org/st</span><br><span class="line">git clone https://git.suckless.org/dmenu</span><br><span class="line">git clone https://git.suckless.org/slstatus</span><br></pre></td></tr></table></figure>
+
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Enter the root directory of each project and install it, as shown below.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd dwm</span><br><span class="line">sudo make clean install</span><br></pre></td></tr></table></figure>
+
+<p>The four project were created by the same company named <code>suckless</code>, so they can be together</p>
+<h2 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h2><h3 id="Copy-xinitrc-to-home"><a href="#Copy-xinitrc-to-home" class="headerlink" title="Copy .xinitrc to home"></a>Copy <code>.xinitrc</code> to home</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br></pre></td></tr></table></figure>
+
+<p>To add some startup items into <code>~/.xinitrc</code> file, it will be runned after xorg init</p>
+<h3 id="Add-dwm-into-xinitrc"><a href="#Add-dwm-into-xinitrc" class="headerlink" title="Add dwm into .xinitrc"></a>Add <code>dwm</code> into <code>.xinitrc</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvim ~/.xinitrc</span><br><span class="line">exec dwm</span><br></pre></td></tr></table></figure>
+<p>Add <code>exec dwm</code> to end of fild</p>
+<h2 id="Run-startx"><a href="#Run-startx" class="headerlink" title="Run startx"></a>Run <code>startx</code></h2><p>The basic desktop system is installed, you can run <code>startx</code> to start it.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Archlinux/" rel="tag"># Archlinux</a>
+          </div>
+
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alonescar.github.io/2022/11/30/Archlinux-Simplest-Install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://als504131-1258573482.cos.ap-guangzhou.myqcloud.com/alonescar.jpeg">
-      <meta itemprop="name" content="AloneScar">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="als-blog">
-      <meta itemprop="description" content="Some note about programming">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | als-blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/11/30/Archlinux-Simplest-Install/" class="post-title-link" itemprop="url">Archlinux Simplest Install</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-11-30 05:15:46 / Modified: 22:38:25" itemprop="dateCreated datePublished" datetime="2022-11-30T05:15:46+08:00">2022-11-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/System/" itemprop="url" rel="index"><span itemprop="name">System</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Verify-Boot-Mode"><a href="#Verify-Boot-Mode" class="headerlink" title="Verify Boot Mode"></a>Verify Boot Mode</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ls /sys/firmware/efi/efivars</span><br></pre></td></tr></table></figure>
-
-<p>if there is nothing output, please find another tutorial.</p>
-<h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><p>To prohibit mirror list updated.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl stop reflector.service</span><br></pre></td></tr></table></figure>
-
-<p>This step is important, if not, it will be updated your mirror list and you need type it by yourself.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># iwctl</span><br><span class="line"># iwctl device list // Get station name -&gt; wlan0</span><br><span class="line"># station wlan0 scan // Scan surrounding wifi</span><br><span class="line"># station wlan0 get-networks // Get surrounding wifi_name</span><br><span class="line"># station wlan0 connect wifi_name // Connect wifi, then type password.</span><br><span class="line"># exit</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/30/Archlinux-Simplest-Install/#more" rel="contents">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/30/Archlinux-Simplest-Install/" rel="prev" title="Archlinux Simplest Install">
+                  <i class="fa fa-chevron-left"></i> Archlinux Simplest Install
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alonescar.github.io/2022/11/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://als504131-1258573482.cos.ap-guangzhou.myqcloud.com/alonescar.jpeg">
-      <meta itemprop="name" content="AloneScar">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="als-blog">
-      <meta itemprop="description" content="Some note about programming">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | als-blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/11/30/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-11-30 05:11:33" itemprop="dateCreated datePublished" datetime="2022-11-30T05:11:33+08:00">2022-11-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
